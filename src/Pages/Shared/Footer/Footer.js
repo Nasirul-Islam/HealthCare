@@ -49,8 +49,8 @@ const Footer = () => {
                         </div>
                     </Col>
                 </Row>
-                <Row className="py-4">
-                    <p className="footer-bootom">Copyright © 2021 HealthCare.com</p>
+                <Row className="py-4 footer-bootom">
+                    <p className="">Copyright © 2021 HealthCare.com</p>
                 </Row>
             </Container>
         </div>

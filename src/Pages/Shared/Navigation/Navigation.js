@@ -39,7 +39,7 @@ const Navigation = () => {
                                 <Link to="/blog">Blog</Link>
                             </Nav.Link>
                             <Nav.Link href="#pricing">
-                                <Link to="/blog">Log In</Link>
+                                <Link to="/login">Log In</Link>
                             </Nav.Link>
                             <Nav.Link href="#pricing">
                                 <Link to="/blog">Log Out</Link>

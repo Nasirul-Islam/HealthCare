@@ -1,0 +1,9 @@
+.login h2{
+    color: rgb(102, 194, 10);
+    font-weight: 600;
+}
+
+.login a{
+    text-decoration: none;
+    font-weight: 600;
+}

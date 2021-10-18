@@ -1,0 +1,23 @@
+.service img{
+    height: 250px;
+}
+
+.service .serviceBtn {
+    background: rgb(245, 137, 118);
+    outline: none;
+    border: none;
+}
+
+.service :hover .serviceBtn {
+    background: rgb(145, 158, 214);
+}
+
+.service a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.service :hover a{
+    color: black;
+}
