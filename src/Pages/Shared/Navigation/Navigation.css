@@ -1,4 +1,32 @@
+.nav-top{
+    background: rgb(102, 197, 6);
+    height: 90px;
+    line-height: 90px;
+}
+
+.nav-top span{
+    background: rgb(250, 111, 86);
+    border-radius: 50%;
+    padding: 5px;
+    color: rgb(241, 241, 77);
+}
+
+.nav-top p {
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
+
+.navigation h1 {
+    font-size: 25px;
+    font-weight: 600;
+    color: rgb(250, 111, 86);
+}
+
 .navigation a{
     text-decoration: none;
-    color: white;
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 15px;
 }
