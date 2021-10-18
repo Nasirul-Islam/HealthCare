@@ -1,0 +1,9 @@
+.team .card{
+    border: none;
+}
+.team :hover .card{
+    border: 2px solid gray;
+}
+.team img{
+    border-radius: 50%;
+}

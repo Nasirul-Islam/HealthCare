@@ -1,12 +1,14 @@
 import React from 'react';
-import { Col, Container, Nav, Navbar, Row } from 'react-bootstrap';
+import { Button, Col, Container, Nav, Navbar, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Navigation.css';
 import { FaClock } from "react-icons/fa";
 import { BsFillTelephoneOutboundFill } from "react-icons/bs";
-
+import useAuth from '../../../hooks/useAuth';
 
 const Navigation = () => {
+    const { user, handlelogOut } = useAuth();
+    console.log(user)
     return (
         <>
             <div className="nav-top">
@@ -32,18 +34,24 @@ const Navigation = () => {
                             <Nav.Link href="#home">
                                 <Link to="/home">Home</Link>
                             </Nav.Link>
-                            <Nav.Link href="#features">
-                                <Link to="/about">About</Link>
+                            <Nav.Link href="#team">
+                                <Link to="/team">Team</Link>
                             </Nav.Link>
-                            <Nav.Link href="#pricing">
-                                <Link to="/blog">Blog</Link>
+                            <Nav.Link href="#contact">
+                                <Link to="/contact">Contact</Link>
                             </Nav.Link>
-                            <Nav.Link href="#pricing">
-                                <Link to="/login">Log In</Link>
+                            <Nav.Link href="#contact">
+                                <span>{user?.displayName}</span>
                             </Nav.Link>
-                            <Nav.Link href="#pricing">
-                                <Link to="/blog">Log Out</Link>
-                            </Nav.Link>
+                            {!user?.email ?
+                                <Nav.Link href="#login">
+                                    <Link to="/login">Log In</Link>
+                                </Nav.Link>
+                                :
+                                <Button onClick={handlelogOut} className="logOutBtn">
+                                    Log Out
+                                </Button>
+                            }
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

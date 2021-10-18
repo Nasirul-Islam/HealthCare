@@ -1,6 +1,5 @@
 import React from 'react';
 import { Button, Card, Col } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 import './SingleServices.css';
 import { useHistory } from 'react-router';
 
@@ -25,7 +24,6 @@ const SingleServices = (props) => {
                     <Button onClick={handleservicebtn} className="serviceBtn">
                         Details
                     </Button>
-                    {/* <Link to={url}>Details</Link> */}
                 </Card>
             </Col>
         </>

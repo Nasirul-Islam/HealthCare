@@ -3,55 +3,73 @@
         {
             "id": 11,
             "title": "Hair Care",
+            "name": "Dr. Johnson",
             "description": "Trichologist is an expert in human hair, a Dermatologist is a medical doctor. A trichologist is an expert in human hair, from making it look its best through to treating problems with your hair and scalp.",
+            "url": "http://kamleshyadav.com/healthcare/healthcare/assets/images/team1.jpg",
             "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSR-sY0uCO--0O4khMnzOd_SgdJRv_ftw1Ezw3cZBj_6hi3Bf4RWaypgDx6lbGetzmw9q8&usqp=CAU"
         },
         {
             "id": 22,
             "title": "Eye Care",
+            "name": "Dr. Nancy",
             "description": "Primary eye care is the provision of appropriate, accessible, and affordable care that meets patients' eye care needs in a comprehensive and competent manner. Primary eye care provides the patient with the first contact for eye care as well as a lifetime of continuing care.",
+            "url": "http://kamleshyadav.com/healthcare/healthcare/assets/images/team2.jpg",
             "img": "https://images.indianexpress.com/2021/08/GettyImages-eyesight-eye-care-1200.jpg"
         },
         {
             "id": 33,
             "title": "Dentist",
+            "name": "Dr. Jorz Maxwell",
             "description": "Dentists diagnose and treat problems with patients' teeth, gums, and related parts of the mouth. They provide advice and instruction on taking care of the teeth and gums and on diet choices that affect oral health.",
+            "url": "http://kamleshyadav.com/healthcare/healthcare/assets/images/team3.jpg",
             "img": "https://ichef.bbci.co.uk/news/976/cpsprodpb/2291/production/_110894880_gettyimages-1055182908.jpg"
         },
         {
             "id": 44,
             "title": "Gynaecology",
+            "name": "Dr. Nilla Roy",
             "description": "Gynecologists give reproductive and sexual health services that include pelvic exams, Pap tests, cancer screenings, and testing and treatment for vaginal infections. They diagnose and treat reproductive system disorders such as endometriosis, infertility, ovarian cysts, and pelvic pain.",
+            "url": "http://kamleshyadav.com/healthcare/healthcare/assets/images/team4.jpg",
             "img": "https://5.imimg.com/data5/JO/VN/GLADMIN-64683401/gynaecologist-500x500.png"
         },
         {
             "id": 55,
             "title": "Psychology",
+            "name": "Dr. Adam Jani",
             "description": "Psychology is the study of the mind and behavior, according to the American Psychological Association. It is the study of the mind, how it works, and how it affects behavior. ... A psychologist treats a patient through psychotherapy, helping to relieve symptoms through behavioral change.",
+            "url": "http://kamleshyadav.com/healthcare/healthcare/assets/images/team5.jpg",
             "img": "https://www.psypost.org/wp-content/uploads/2021/07/man-thinking-brain-gears-750x375.jpg"
         },
         {
             "id": 66,
             "title": "Cardiology",
+            "name": "Dr. Nikki Bella",
             "description": "Cardiology is the study and treatment of disorders of the heart and the blood vessels. A person with heart disease or cardiovascular disease may be referred to a cardiologist. Cardiology is a branch of internal medicine. ... A cardiologist specializes in diagnosing and treating diseases of the cardiovascular system",
+            "url": "http://kamleshyadav.com/healthcare/healthcare/assets/images/team6.jpg",
             "img": "https://d2cax41o7ahm5l.cloudfront.net/mi/upload-images/cardiology@1234-9010.jpg"
         },
         {
             "id": 77,
             "title": "Pathology Lab",
+            "name": "Dr. Sanju Samson",
             "description": "Clinical Pathology is responsible for tests performed from blood, urine, and other body fluids. We perform close to 2 million laboratory tests per year in the sections of clinical chemistry, hematology, microbiology, immunology, and immunohematology (blood banking).",
+            "url": "http://kamleshyadav.com/healthcare/healthcare/assets/images/team7.jpg",
             "img": "https://3.imimg.com/data3/VU/AY/MY-9128641/pathology-lab-500x500.jpg"
         },
         {
             "id": 88,
             "title": "Neurology",
+            "name": "Dr. Charus Dolly",
             "description": "Neurologists are specialists who treat diseases of the brain and spinal cord, peripheral nerves and muscles. Neurological conditions include epilepsy, stroke, multiple sclerosis (MS) and Parkinson's disease.",
+            "url": "http://kamleshyadav.com/healthcare/healthcare/assets/images/team8.jpg",
             "img": "https://aighospitals.com/wp-content/uploads/2020/11/Neurology_featured.png"
         },
         {
             "id": 99,
             "title": "Pediatrician",
+            "name": "Dr. Johnson Samson",
             "description": "Pediatricians focus on the physical, emotional, and social health of infants, children, adolescents, and young adults up to age 21. Because they work with so many aspects of children's health, they're highly trained in assessing, detecting, preventing, and managing issues that affect children.",
+            "url": "http://kamleshyadav.com/healthcare/images/testimonial/test2.jpg",
             "img": "https://www.windsor.edu/wp-content/uploads/2018/10/considering-pediatrics-1109x675.jpg"
         }
     ]

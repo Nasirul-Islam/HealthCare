@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
 const Register = () => {
-    const { handleRegisterWithEmail, handleGoogleLogin } = useAuth();
+    const { handleRegisterWithEmail, handleGoogleLogin, handleEmail, handlePassword } = useAuth();
     return (
         <Container className="login py-4">
             <h2 className="pb-4">
@@ -13,16 +13,13 @@ const Register = () => {
 
             <Form className="w-25 m-auto">
                 <Form.Group className="mb-4" controlId="formGroupEmail">
-                    {/* <Form.Label>Email address</Form.Label> */}
                     <Form.Control type="text" placeholder="Enter Your Name" />
                 </Form.Group>
                 <Form.Group className="mb-4" controlId="formGroupEmail">
-                    {/* <Form.Label>Email address</Form.Label> */}
-                    <Form.Control type="email" placeholder="Enter email" />
+                    <Form.Control onBlur={handleEmail} type="email" placeholder="Enter email" />
                 </Form.Group>
                 <Form.Group className="mb-4" controlId="formGroupPassword">
-                    {/* <Form.Label>Password</Form.Label> */}
-                    <Form.Control type="password" placeholder="Enter Password" />
+                    <Form.Control onBlur={handlePassword} type="password" placeholder="Enter Password" />
                 </Form.Group>
                 <Button className="w-100" onClick={handleRegisterWithEmail}>
                     Register
