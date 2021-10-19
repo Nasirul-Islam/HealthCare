@@ -8,7 +8,7 @@ const TeamMember = (props) => {
         <>
             <Col className="team">
                 <Card>
-                    <Card.Img variant="top" src={url} />
+                    <Card.Img width="80%" className="img-fluid" variant="top" src={url} />
                     <Card.Body>
                         <h3>{name}</h3>
                         <Card.Title>{title}</Card.Title>
@@ -16,9 +16,6 @@ const TeamMember = (props) => {
                             {description}
                         </Card.Text>
                     </Card.Body>
-                    {/* <Button onClick={handleservicebtn} className="serviceBtn">
-                        Details
-                    </Button> */}
                 </Card>
             </Col>
         </>

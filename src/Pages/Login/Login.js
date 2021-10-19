@@ -5,7 +5,7 @@ import useAuth from '../../hooks/useAuth';
 import './Login.css';
 
 const Login = () => {
-    const { handleGoogleLogin, handleLoginWithEmail, handleForgetPassword, handleEmail, handlePassword, setIsLoding } = useAuth();
+    const { handleGoogleLogin, handleLoginWithEmail, handleForgetPassword, handleEmail, handlePassword, setIsLoding, errorMessage } = useAuth();
 
     const location = useLocation();
     const history = useHistory();
@@ -30,6 +30,7 @@ const Login = () => {
                 <Form.Group className="mb-3" controlId="formGroupPassword">
                     <Form.Control onBlur={handlePassword} type="password" placeholder="Password" />
                 </Form.Group>
+                <p>{errorMessage}</p>
                 <br />
                 <Button className="w-100" onClick={handleLoginWithEmail}>
                     Log In

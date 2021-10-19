@@ -11,7 +11,7 @@ const Footer = () => {
                 <Row className="py-5">
                     <Col md={6} className=" text-start">
                         <h2>HealthCare</h2>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam impedit, quasi rerum sunt aspernatur quas mollitia ea ut sapiente optio laudantium, harum quidem ipsam amet non at explicabo dolorem quod.</p>
+                        <p>Health care is the maintenance or improvement of health via the prevention, diagnosis, treatment, recovery, or cure of disease, illness, injury, and other physical and mental impairments in people. Health care is delivered by health professionals and allied health fields.</p>
                     </Col>
                     <Col md={3} className="socialMedia">
                         <h2>Social Media</h2>
