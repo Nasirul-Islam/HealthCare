@@ -5,7 +5,7 @@ import useAuth from '../../hooks/useAuth';
 import './Login.css';
 
 const Login = () => {
-    const { handleGoogleLogin, handleLoginWithEmail, handleForgetPassword, handleEmail, handlePassword } = useAuth();
+    const { handleGoogleLogin, handleLoginWithEmail, handleForgetPassword, handleEmail, handlePassword, setIsLoding } = useAuth();
 
     const location = useLocation();
     const history = useHistory();
@@ -15,6 +15,7 @@ const Login = () => {
             .then(result => {
                 history.push(redirect_uri)
             })
+            .finally(() => setIsLoding(false))
     }
     return (
         <Container className="login py-4">

@@ -40,9 +40,9 @@ const Navigation = () => {
                             <Nav.Link href="#contact">
                                 <Link to="/contact">Contact</Link>
                             </Nav.Link>
-                            <Nav.Link href="#contact">
+                            {user?.email && <Nav.Link href="#contact">
                                 <span>{user?.displayName}</span>
-                            </Nav.Link>
+                            </Nav.Link>}
                             {!user?.email ?
                                 <Nav.Link href="#login">
                                     <Link to="/login">Log In</Link>

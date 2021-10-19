@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { getAuth, signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged, updateProfile } from "firebase/auth";
 import initializeAuthentication from "../Firebase/Firebase.init";
 
 initializeAuthentication();
@@ -7,40 +7,56 @@ initializeAuthentication();
 const useFirebase = () => {
     const [user, setUser] = useState({});
     const [errorMessage, setErrorMessage] = useState('');
+    const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [isLoding, setIsLoding] = useState(true);
 
     const auth = getAuth();
     const Googleprovider = new GoogleAuthProvider();
 
     const handleGoogleLogin = () => {
+        setIsLoding(true);
         return signInWithPopup(auth, Googleprovider)
     }
     useEffect(() => {
-        onAuthStateChanged(auth, (user) => {
+        const unsubscribed = onAuthStateChanged(auth, (user) => {
             if (user) {
                 setUser(user);
             }
             else {
                 setUser({});
             }
+            setIsLoding(false);
         });
+        return () => unsubscribed
     }, [])
+    const handleName = (e) => {
+        setName(e.target.value);
+    }
     const handleEmail = (e) => {
         setEmail(e.target.value);
-        console.log(e.target.value)
     }
     const handlePassword = (e) => {
         setPassword(e.target.value);
-        console.log(e.target.value)
     }
     const handleRegisterWithEmail = () => {
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 setUser(userCredential.user);
+                setUserName();
             })
             .catch((error) => {
                 setErrorMessage(error.message);
+            });
+    }
+    const setUserName = () => {
+        updateProfile(auth.currentUser, {
+            displayName: name
+        }).then(() => {
+
+        })
+            .catch((error) => {
             });
     }
     const handleLoginWithEmail = () => {
@@ -53,21 +69,27 @@ const useFirebase = () => {
             });
     }
     const handlelogOut = () => {
+        setIsLoding(true)
         signOut(auth).then(() => {
-            setUser({});
-        }).catch((error) => {
-            setErrorMessage('');
-        });
+            setUser({})
+        })
+            .catch((error) => {
+                setErrorMessage('')
+            })
+            .finally(() => setIsLoding(false))
     }
     return {
         user,
         errorMessage,
         handleGoogleLogin,
+        handleName,
         handleEmail,
         handlePassword,
         handleRegisterWithEmail,
         handleLoginWithEmail,
-        handlelogOut
+        handlelogOut,
+        isLoding,
+        setIsLoding
         // handleForgetPassword
     }
 }
