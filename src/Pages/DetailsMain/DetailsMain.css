@@ -1,0 +1,12 @@
+.detailsMain .doctor{
+    background: rgb(194, 236, 201);
+    padding: 15px;
+    border-radius: 15px;
+}
+.detailsMain .doctorImg{
+    width: 250px;
+    border-radius: 15px;
+}
+/* .detailsMain .doctorBanner{
+    width: 500px;
+} */

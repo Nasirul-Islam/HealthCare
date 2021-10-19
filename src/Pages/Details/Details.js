@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Container } from 'react-bootstrap';
 import { useParams } from 'react-router';
 import DetailsMain from '../DetailsMain/DetailsMain';
 
@@ -11,16 +12,18 @@ const Details = () => {
             .then(res => res.json())
             .then(data => setAllData(data))
     }, [])
+    const result = allData?.services?.filter(service => service.id == detailsID)
+    console.log(result)
+    console.log(detailsID)
     return (
-        <div>
-            <h2>Details {detailsID}</h2>
+        <Container>
             {
-                allData?.services?.map(service => <DetailsMain
+                result?.map(service => <DetailsMain
                     key={service.id}
                     service={service}
                 ></DetailsMain>)
             }
-        </div>
+        </Container>
     );
 };
 

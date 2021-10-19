@@ -8,7 +8,6 @@ import useAuth from '../../../hooks/useAuth';
 
 const Navigation = () => {
     const { user, handlelogOut } = useAuth();
-    console.log(user)
     return (
         <>
             <div className="nav-top">
@@ -31,26 +30,28 @@ const Navigation = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="ms-auto">
-                            <Nav.Link href="#home">
+                            <Nav>
                                 <Link to="/home">Home</Link>
-                            </Nav.Link>
-                            <Nav.Link href="#team">
+                            </Nav>
+                            <Nav>
                                 <Link to="/team">Team</Link>
-                            </Nav.Link>
-                            <Nav.Link href="#contact">
+                            </Nav>
+                            <Nav>
                                 <Link to="/contact">Contact</Link>
-                            </Nav.Link>
-                            {user?.email && <Nav.Link href="#contact">
-                                <span>{user?.displayName}</span>
-                            </Nav.Link>}
+                            </Nav>
                             {!user?.email ?
-                                <Nav.Link href="#login">
+                                <Nav>
                                     <Link to="/login">Log In</Link>
-                                </Nav.Link>
+                                </Nav>
                                 :
-                                <Button onClick={handlelogOut} className="logOutBtn">
-                                    Log Out
-                                </Button>
+                                <>
+                                    <Nav>
+                                        <span>Signed in as: {user?.displayName}</span>
+                                    </Nav>
+                                    <Button onClick={handlelogOut} className="logOutBtn">
+                                        Log Out
+                                    </Button>
+                                </>
                             }
                         </Nav>
                     </Navbar.Collapse>
